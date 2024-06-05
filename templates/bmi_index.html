@@ -1,0 +1,22 @@
+<head>
+    <title>BMI Calculator using Flask</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<body><br>
+    <h3>Calculate your BMI to stay in touch with your health</h3><br>
+    <form class="pure-form" method="POST" action="/">
+        Enter your weight (kgs):
+        <input type="number" name="weight" step="0.01" required><br>
+        Enter your height (cms):
+        <input type="number" name="height" step="0.01" required><br>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </form>
+
+    {% if bmi %}
+        <div>
+            <p>Your BMI: {{ bmi }}</p>
+            <p>{{ message }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
